@@ -4,7 +4,7 @@ import { useState } from "react";
 import { generateEOTSKeyPair, signEOTS, verifyEOTS, extractPrivateKey, deriveTaprootAddress, getPublicKey, signatureToFullHex, bytesToHex, hexToBytes, generateRandomPrivateKey, generateRandomNonce, generateRandomMessageHash, isValidHex } from "@/lib";
 import { sha256 } from "@noble/hashes/sha256";
 import type { EOTSSignature } from "@/lib";
-import { runEOTSTests } from "@/lib/test";
+// import { runEOTSTests } from "@/lib/test";
 
 interface FormData {
   privateKey: string;
@@ -231,15 +231,15 @@ export default function Home() {
     setErrors([]);
   };
 
-  const handleRunTests = () => {
-    try {
-      runEOTSTests();
-      alert("✅ All tests passed! Check the browser console for detailed results.");
-    } catch (error) {
-      alert("❌ Tests failed! Check the browser console for details.");
-      console.error("Test error:", error);
-    }
-  };
+  // const handleRunTests = () => {
+  //   try {
+  //     runEOTSTests();
+  //     alert("✅ All tests passed! Check the browser console for detailed results.");
+  //   } catch (error) {
+  //     alert("❌ Tests failed! Check the browser console for details.");
+  //     console.error("Test error:", error);
+  //   }
+  // };
 
   return (
     <div className="container mx-auto p-6 max-w-4xl">
